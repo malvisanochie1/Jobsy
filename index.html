@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-[#747891]">
+    <div
+      style="font-family: Noto Sans"
+      class="w-full py-2 md:py-4 shadow items-center px-5"
+    >
+      <nav class="navbar h-full right-0 max-w-7xl mx-auto items-center flex">
+        <div class="flex w-full mx-auto items-center justify-between">
+          <div class="md:hidden flex items-center">
+            <!-- drawer init and show -->
+            <div class="text-center flex">
+              <div
+                type="button"
+                data-drawer-target="drawer-navigation"
+                data-drawer-show="drawer-navigation"
+                aria-controls="drawer-navigation"
+                class="me-4 cursor-pointer"
+              >
+                <hr class="w-3 h-1 bg-slate-400" />
+                <hr class="w-4 h-1 bg-slate-400 my-[2px]" />
+                <hr class="w-6 h-1 bg-slate-400" />
+              </div>
+            </div>
+            <div>
+              <h1
+                style="font-family: Shadows Into Light"
+                class="text-[30px] font-bold text-purple-600"
+              >
+                Damera
+              </h1>
+            </div>
+          </div>
+          <div class="hidden md:flex">
+            <h1
+              style="font-family: Shadows Into Light"
+              class="text-2xl font-bold text-purple-600"
+            >
+              Damera
+            </h1>
+          </div>
+          <div class="items-center">
+            <ul
+              class="md:flex gap-4 w-full font-semibold text-lg items-center text-gray-500 hidden"
+            >
+              <li
+                id="dropdownHoverButton"
+                data-dropdown-toggle="dropdownHover"
+                data-dropdown-trigger="hover"
+                data-dropdown-delay="300"
+                class="flex items-center cursor-pointer"
+              >
+                Home
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </li>
+              <li class="">
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownHover"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownHoverButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Earnings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Sign out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                id="dropdownHoverButtonTwo"
+                data-dropdown-toggle="dropdownHoverTwo"
+                data-dropdown-trigger="hover"
+                data-dropdown-delay="300"
+                class="flex items-center cursor-pointer"
+              >
+                Services
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </li>
+              <li class="">
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownHoverTwo"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownHoverButtonTwo"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Earnings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Sign out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                id="dropdownHoverButtonThree"
+                data-dropdown-toggle="dropdownHoverThree"
+                data-dropdown-trigger="hover"
+                data-dropdown-delay="300"
+                class="flex items-center cursor-pointer"
+              >
+                Pages
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </li>
+              <li class="">
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownHoverThree"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownHoverButtonThree"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Earnings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Sign out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="md:flex gap-4 font-semibold text-lg items-center text-gray-600 hidden"
+          >
+            <a
+              href="#"
+              class="bg-purple-800 py-2 px-5 rounded-md text-white text-sm"
+            >
+              Sign In
+            </a>
+          </div>
+          <div class="md:hidden">
+            <div class="gap-2">
+              <a
+                href="#"
+                class="border-purple-800 hover:bg-purple-800 font-bold hover:text-white text-purple-800 border py-1.5 px-3 rounded-md text-xs me-4"
+              >
+                Log In
+              </a>
+              <a
+                href="#"
+                class="border-purple-800 border bg-purple-800 py-1.5 px-3 rounded-md text-white text-xs"
+              >
+                Sign In
+              </a>
+            </div>
+
+            <!-- drawer component -->
+            <div
+              id="drawer-navigation"
+              class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+              tabindex="-1"
+              aria-labelledby="drawer-navigation-label"
+            >
+              <h5
+                id="drawer-navigation-label"
+                class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+              >
+                Menu
+              </h5>
+              <button
+                type="button"
+                data-drawer-hide="drawer-navigation"
+                aria-controls="drawer-navigation"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span class="sr-only">Close menu</span>
+              </button>
+              <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2 font-medium">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"
+                        />
+                      </svg>
+                      <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                      <span
+                        class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                        >3</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      aria-controls="dropdown-example"
+                      data-collapse-toggle="dropdown-example"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 18 21"
+                      >
+                        <path
+                          d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"
+                        />
+                      </svg>
+                      <span
+                        class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                        >E-commerce</span
+                      >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                          >Products</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                          >Billing</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                          >Invoice</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 18"
+                      >
+                        <path
+                          d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
+                        />
+                      </svg>
+                      <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 18 20"
+                      >
+                        <path
+                          d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"
+                        />
+                      </svg>
+                      <span class="flex-1 ms-3 whitespace-nowrap"
+                        >Products</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 18 16"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+                        />
+                      </svg>
+                      <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    >
+                      <svg
+                        class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"
+                        />
+                        <path
+                          d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"
+                        />
+                        <path
+                          d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"
+                        />
+                      </svg>
+                      <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div>
+      <div class="relative mb-20">
+        <div
+          id="default-carousel"
+          class="relative w-full"
+          data-carousel="slide"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative h-96 overflow-hidden rounded-b-lg md:h-[89.5vh]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="images/painter.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <p class="text-4xl text-[#b4b431e1] font-bold">Get in touch</p>
+                <p class="text-xl text-white font-bold">
+                  with the nearest painter
+                </p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="images/welding.webp"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              <p
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-bold"
+              >
+                Text 2
+              </p>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="images/painter.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              <p
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-bold"
+              >
+                Text 3
+              </p>
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="images/welding.webp"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              <p
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-bold"
+              >
+                Text 4
+              </p>
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="images/welding.webp"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+              <p
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg font-bold"
+              >
+                Text 5
+              </p>
+            </div>
+          </div>
+          <!-- Slider indicators -->
+        </div>
+
+        <div class="absolute bg-[#00000062] z-30 w-full h-full top-0">
+          <div class="h-full w-full flex items-end justify-center p-6 pb-10 md:pb-40">
+            <div
+              class="w-full   md:max-w-4xl h-14 md:h-20 bg-white rounded-3xl flex items-center  px-2 md:px-4"
+            >
+              <button
+                id="dropdownHoverButton"
+                data-dropdown-toggle="dropdownHover"
+                data-dropdown-trigger="hover"
+                class="text-gray-500 border me-10 focus:ring-2 focus:outline-none focus:ring-[#6B21A8] font-medium rounded-2xl text-sm px-10 py-3 md:py-4 text-center inline-flex items-center"
+                type="button"
+              >
+                Select
+                <svg
+                  class="w-2.5 h-2.5 ms-20"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              <form class="max-w-2xl w-full mx-auto">
+                <label
+                  for="default-search"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                  >Search</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="block w-full p-3 md:p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-[#6B21A8] focus:border-[#6B21A8] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="Search Mockups, Logos..."
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute end-2.5 bottom-1.5 md:bottom-2.5 bg-[#6B21A8] hover:bg-[#6B21A8] focus:ring-4 focus:outline-none focus:ring-[#6B21A8] font-medium rounded-xl md:rounded-lg text-sm px-4 py-2"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownHover"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownHoverButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Painter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Cleaner</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >car Wash</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Plumber</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-11/12 mx-auto mb-20">
+        <div class="grid lg:grid-cols-12 grid-cols-1 gap-10">
+          <div class="lg:col-span-4 mx-auto flex justify-center">
+            <div class="border w-full mx-auto">
+              <div class="w-full p-6 border-b">
+                <img
+                  src="images/img-gal.jpg"
+                  class="rounded-full w-24 h-24 mx-auto"
+                  alt=""
+                />
+                <h2 class="font-bold text-lg text-center">Gabriel Palmer</h2>
+                <p class="lg:text-lg text-center text-base mt-2 mb-8">
+                  Creative Designer
+                </p>
+                <div class="flex gap-8 justify-center">
+                  <div
+                    class="rounded-full w-10 h-10 bg-gray-100 grid place-content-center"
+                  >
+                    <a href="#">
+                      <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rounded-full w-10 h-10 bg-gray-100 grid place-content-center"
+                  >
+                    <a href="#">
+                      <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                  </div>
+                  <div
+                    class="rounded-full w-10 h-10 bg-gray-100 grid place-content-center"
+                  >
+                    <a href="#"> <i class="fa-solid fa-phone text-xl"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border-b">
+                <h2 class="font-bold text-lg">Profile Overview</h2>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Categories</label
+                  >
+                  <p class="text-base">Accounting / Finance</p>
+                </div>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Offered Salary
+                  </label>
+                  <p class="text-base">$450 per hour</p>
+                </div>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Languages</label
+                  >
+                  <p class="text-base">English, Turkish, Japanese</p>
+                </div>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Experience</label
+                  >
+                  <p class="text-base">3 Years</p>
+                </div>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Qualification
+                  </label>
+                  <p class="text-base">Associate Degree</p>
+                </div>
+                <div class="flex items-center gap-8 my-4">
+                  <label for="Categories" class="text-base font-semibold"
+                    >Views
+                  </label>
+                  <p class="text-base">2574</p>
+                </div>
+                <a
+                  href="tel:+1234567890"
+                  class="w-full h-12 bg-[#DC2626] rounded flex justify-center items-center text-white font-bold text-base transform translate-y-2 transition-transform duration-300 ease-in-out hover:translate-y-0 hover:shadow-md"
+                >
+                  <i class="fa-solid fa-phone text-white me-3"></i> Contact Me
+                </a>
+                <a
+                  href="path/to/your/file.pdf"
+                  download="filename.pdf"
+                  class="mt-4 w-full h-12 bg-[#815DF2] rounded flex justify-center items-center text-white font-bold text-base transform translate-y-2 transition-transform duration-300 ease-in-out hover:translate-y-0 hover:shadow-md"
+                >
+                  <i class="fa-solid fa-download text-white me-3"></i> Download
+                  CV
+                </a>
+                <div class="flex items-center justify-between mt-6">
+                  <div class="flex items-center text-yellow-500 gap-2">
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                  </div>
+                  <div
+                    class="flex items-center justify-center w-10 h-10 border group hover:bg-[#DC2626] rounded transform transition-transform duration-300 ease-in-out"
+                  >
+                    <i class="fa-regular fa-heart group-hover:text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border-b">
+                <h2 class="font-bold text-lg">Professional Skills</h2>
+                <div class="flex flex-wrap gap-3">
+                  <p
+                    class="bg-[#D1E9E3] text-[#048A96] text-sm font-medium px-2.5 py-0.5 rounded-md"
+                  >
+                    User Interface Design
+                  </p>
+                  <p
+                    class="bg-[#D1E9E3] text-[#048A96] text-sm font-medium px-2.5 py-0.5 rounded-md"
+                  >
+                    Web Design
+                  </p>
+                  <p
+                    class="bg-[#D1E9E3] text-[#048A96] font-medium px-2.5 py-0.5 rounded-md"
+                  >
+                    Responsive Design
+                  </p>
+                  <p
+                    class="bg-[#D1E9E3] text-[#048A96] font-medium px-2.5 py-0.5 rounded-md"
+                  >
+                    Mobile App Design
+                  </p>
+                  <p
+                    class="bg-[#D1E9E3] text-[#048A96] font-medium px-2.5 py-0.5 rounded-md"
+                  >
+                    UI Design
+                  </p>
+                </div>
+              </div>
+              <div class="p-4">
+                <h2 class="font-bold text-lg">Contact Details</h2>
+
+                <div class="space-y-4 mt-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="rounded-full w-12 h-12 bg-slate-300 grid place-content-center"
+                    >
+                      <a href="#">
+                        <i
+                          class="fa-regular fa-envelope text-[#9E95F4] text-base"
+                        ></i>
+                      </a>
+                    </div>
+                    <div>
+                      <label
+                        class="text-gray-900 w-[118px] font-medium dark:text-gray-50"
+                        >Email</label
+                      >
+                      <div>
+                        <p class="mb-0 text-gray-500 dark:text-gray-300">
+                          gabrielpalmer@gmail.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="rounded-full w-12 h-12 bg-slate-300 grid place-content-center"
+                    >
+                      <a href="#">
+                        <i
+                          class="fa-solid fa-location-dot text-base text-[#9E95F4]"
+                        ></i>
+                      </a>
+                    </div>
+                    <div>
+                      <label
+                        class="text-gray-900 w-[118px] font-medium dark:text-gray-50"
+                        >Address</label
+                      >
+                      <div>
+                        <p class="mb-0 text-gray-500 dark:text-gray-300">
+                          Dodge City, Louisiana
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="rounded-full w-12 h-12 bg-slate-300 grid place-content-center"
+                    >
+                      <a href="#">
+                        <i
+                          class="fa-solid fa-phone text-base text-[#9E95F4]"
+                        ></i>
+                      </a>
+                    </div>
+                    <div>
+                      <label
+                        class="text-gray-900 w-[118px] font-medium dark:text-gray-50"
+                        >Phone</label
+                      >
+                      <div>
+                        <p class="mb-0 text-gray-500 dark:text-gray-300">
+                          +1(452) 125-6789
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="rounded-full w-12 h-12 bg-slate-300 grid place-content-center"
+                    >
+                      <a href="#">
+                        <i
+                          class="fa-brands fa-skype text-[#9E95F4] text-xl"
+                        ></i>
+                      </a>
+                    </div>
+                    <div>
+                      <label
+                        class="text-gray-900 w-[118px] font-medium dark:text-gray-50"
+                        >Skype
+                      </label>
+                      <div>
+                        <p class="mb-0 text-gray-500 dark:text-gray-300">
+                          @gabrielpalmer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 mx-auto flex justify-center">
+            <div class="border p-4 mx-auto">
+              <div>
+                <h2 class="lg:text-lg font-bold text-base mt-2 mb-8">
+                  About Me
+                </h2>
+                <p class="lg:text-l text-base mt-2 mb-2">
+                  Very well thought out and articulate communication. Clear
+                  milestones, deadlines and fast work. Patience. Infinite
+                  patience. No shortcuts. Even if the client is being careless.
+                  Some quick example text to build on the card title and bulk
+                  the card's content Moltin gives you platform.
+                </p>
+                <p class="lg:text-l text-base mt-2 mb-8">
+                  As a highly skilled and successfull product development and
+                  design specialist with more than 4 Years of My experience lies
+                  in successfully conceptualizing, designing, and modifying
+                  consumer products specific to interior design and home
+                  furnishings.
+                </p>
+                <h2 class="lg:text-lg font-bold text-base mt-2 mb-8">
+                  Education
+                </h2>
+                <div class="flex my-4">
+                  <div class="me-4">
+                    <p
+                      class="mb-2 w-8 h-8 rounded-full text-[#815DF2] font-medium bg-[#E6DFFC] grid place-content-center"
+                    >
+                      B
+                    </p>
+                    <div
+                      class="ms-3.5 w-1 h-28 bg-transparent border-r-2 border-dotted border-gray-400"
+                    ></div>
+
+                    <div class="ps-4"></div>
+                  </div>
+                  <div>
+                    <h2 class="lg:text-lg font-bold text-base mb-4">
+                      BCA - Bachelor of Computer Applications
+                    </h2>
+                    <p class="lg:text-l text-base">
+                      International University - (2004 - 2010)
+                    </p>
+                    <p class="lg:text-l text-base mt-2">
+                      There are many variations of passages of available, but
+                      the majority alteration in some form. As a highly skilled
+                      and successfull product development and design specialist
+                      with more than 4 Years of My experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex my-4">
+                  <div class="me-4">
+                    <p
+                      class="mb-2 w-8 h-8 rounded-full text-[#815DF2] font-medium bg-[#E6DFFC] grid place-content-center"
+                    >
+                      M
+                    </p>
+                    <div
+                      class="ms-3.5 w-1 h-28 bg-transparent border-r-2 border-dotted border-gray-400"
+                    ></div>
+
+                    <div class="ps-4"></div>
+                  </div>
+                  <div>
+                    <h2 class="lg:text-lg font-bold text-base mb-4">
+                      MCA - Master of Computer Application
+                    </h2>
+                    <p class="lg:text-l text-base">
+                      International University - (2010 - 2012)
+                    </p>
+                    <p class="lg:text-l text-base mt-2">
+                      There are many variations of passages of available, but
+                      the majority alteration in some form. As a highly skilled
+                      and successfull product development and design specialist
+                      with more than 4 Years of My experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex my-4">
+                  <div class="me-4">
+                    <p
+                      class="mb-2 w-8 h-8 rounded-full text-[#815DF2] font-medium bg-[#E6DFFC] grid place-content-center"
+                    >
+                      M
+                    </p>
+                    <div
+                      class="ms-3.5 w-1 h-28 bg-transparent border-r-2 border-dotted border-gray-400"
+                    ></div>
+
+                    <div class="ps-4"></div>
+                  </div>
+                  <div>
+                    <h2 class="lg:text-lg font-bold text-base mb-4">
+                      Design Communication Visual
+                    </h2>
+                    <p class="lg:text-l text-base">
+                      International University - (2012-2015)
+                    </p>
+                    <p class="lg:text-l text-base mt-2">
+                      There are many variations of passages of available, but
+                      the majority alteration in some form. As a highly skilled
+                      and successfull product development and design specialist
+                      with more than 4 Years of My experience.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 class="lg:text-lg font-bold text-base mt-2 mb-8">
+                  Experience
+                </h2>
+                <div class="flex my-4">
+                  <div class="me-4">
+                    <p
+                      class="mb-2 w-8 h-8 rounded-full text-[#815DF2] font-medium bg-[#E6DFFC] grid place-content-center"
+                    >
+                      w
+                    </p>
+                    <div
+                      class="ms-3.5 w-1 h-28 bg-transparent border-r-2 border-dotted border-gray-400"
+                    ></div>
+
+                    <div class="ps-4"></div>
+                  </div>
+                  <div>
+                    <h2 class="lg:text-lg font-bold text-base mb-4">
+                      Web Design & Development Team Leader
+                    </h2>
+                    <p class="lg:text-l text-base">
+                      Creative Agency - (2013 - 2016)
+                    </p>
+                    <p class="lg:text-l text-base mt-2">
+                      There are many variations of passages of available, but
+                      the majority alteration in some form. As a highly skilled
+                      and successfull product development and design specialist
+                      with more than 4 Years of My experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex my-4">
+                  <div class="me-4">
+                    <p
+                      class="mb-2 w-8 h-8 rounded-full text-[#815DF2] font-medium bg-[#E6DFFC] grid place-content-center"
+                    >
+                      P
+                    </p>
+
+                    <div class="ps-4"></div>
+                  </div>
+                  <div>
+                    <h2 class="lg:text-lg font-bold text-base mb-4">
+                      Project Manager
+                    </h2>
+                    <p class="lg:text-l text-base">
+                      Jobcy Technology Pvt.Ltd - (Pressent)
+                    </p>
+                    <p class="lg:text-l text-base mt-2">
+                      There are many variations of passages of available, but
+                      the majority alteration in some form. As a highly skilled
+                      and successfull product development and design specialist
+                      with more than 4 Years of My experience.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 class="lg:text-lg font-bold text-base mt-4 mb-8">
+                  Projects
+                </h2>
+                <div class="grid grid-cols-3 gap-4">
+                  <div
+                    class="relative group transition duration-500 ease-in-out overflow-hidden rounded-lg"
+                  >
+                    <img
+                      src="images/img-galw.jpg"
+                      class="rounded-lg w-full h-full group-hover:scale-110 transition duration-500 ease-in-out"
+                      alt=""
+                    />
+                    <div
+                      class="absolute w-full h-full bg-black top-0 opacity-10 group-hover:opacity-60 group-hover:scale-105 transition duration-500 ease-in-out rounded-lg"
+                    >
+                      <div class="w-full h-full grid place-content-center">
+                        <i
+                          class="fa-solid fa-magnifying-glass text-gray-50 z-10"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative group transition duration-500 ease-in-out overflow-hidden rounded-lg"
+                  >
+                    <img
+                      src="images/img-two.jpg"
+                      class="rounded-lg w-full h-full group-hover:scale-110 transition duration-500 ease-in-out"
+                      alt=""
+                    />
+                    <div
+                      class="absolute w-full h-full bg-black top-0 opacity-10 group-hover:opacity-60 group-hover:scale-105 transition duration-500 ease-in-out rounded-lg"
+                    >
+                      <div class="w-full h-full grid place-content-center">
+                        <i
+                          class="fa-solid fa-magnifying-glass text-gray-50 z-10"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative group transition duration-500 ease-in-out overflow-hidden rounded-lg"
+                  >
+                    <img
+                      src="images/img-three.jpg"
+                      class="rounded-lg w-full h-full group-hover:scale-110 transition duration-500 ease-in-out"
+                      alt=""
+                    />
+                    <div
+                      class="absolute w-full h-full bg-black top-0 opacity-10 group-hover:opacity-60 group-hover:scale-105 transition duration-500 ease-in-out rounded-lg"
+                    >
+                      <div class="w-full h-full grid place-content-center">
+                        <i
+                          class="fa-solid fa-magnifying-glass text-gray-50 z-10"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 grid grid-cols-12">
+                  <div class="col-span-1">
+                    <div
+                      class="rounded-full w-[70px] h-[70px] grid place-content-center border-2"
+                    >
+                      <div
+                        class="rounded-full w-14 h-14 grid place-content-center"
+                      >
+                        <img
+                          src="images/img-four.jpg"
+                          class="rounded-full"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-11 ps-7">
+                    <div class="ms-4">
+                      <div class="pt-1 mb-5">
+                        <label
+                          class="text-gray-900 w-[118px] font-medium dark:text-gray-50 mb-3"
+                          >Michelle Durant
+                        </label>
+                        <div class="pt-2">
+                          <div class="flex items-center text-yellow-500 gap-2">
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <i class="lg:text-l text-base mb-2">
+                        "Very well thought out and articulate communication.
+                        Clear milestones, deadlines and fast work. Patience.
+                        Infinite patience. No shortcuts. Even if the client is
+                        being careless. Some quick example text to build on the
+                        card title and bulk the card's content Moltin gives you
+                        platform"
+                      </i>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 grid grid-cols-12">
+                  <div class="col-span-1">
+                    <div
+                      class="rounded-full w-[70px] h-[70px] grid place-content-center border-2"
+                    >
+                      <div
+                        class="rounded-full w-14 h-14 grid place-content-center"
+                      >
+                        <img
+                          src="images/img-five.jpg"
+                          class="rounded-full"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-11 ps-7">
+                    <div>
+                      <div class="pt-1 mb-5">
+                        <label
+                          class="text-gray-800 w-[118px] font-medium dark:text-gray-50 mb-3"
+                          > Jeffrey Montgomery
+
+                        </label>
+                        <div class="pt-2">
+                          <div class="flex items-center text-yellow-500 gap-2">
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <i class="lg:text-l text-base mb-2">
+                        " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "
+
+
+                      </i>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <h2 class="text-gray-700 text-lg w-[118px] font-semibold dark:text-gray-50 "
+                          > 
+                          Add a review
+                        </h2>
+                        <p class="lg:text-l text-base">
+                          Your Rating for this listing
+                        </p>
+
+
+                </div>
+                
+
+<form class="w-full mx-auto pt-10">
+  <div class="mb-5">
+    <label for="text" class="block mb-2 text-sm font-medium text-gray-600 dark:text-white">Your email</label>
+    <input type="text" id="name" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-0 block w-full p-2.5 " placeholder="Enter your name" required />
+  </div>
+  <div class="flex items-center gap-4">
+    <div class="mb-5 w-1/2">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-600 dark:text-white">Your password</label>
+      <input type="email" id="email" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-0 block w-full p-2.5 " required />
+    </div>
+    <div class="mb-5 w-1/2">
+      <label for="text" class="block mb-2 text-sm font-medium text-gray-600 dark:text-white">Subject </label>
+      <input type="subject" id="subject" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-0 block w-full p-2.5 " placeholder="Subject" required />
+    </div>
+
+    
+
+
+  </div>
+<div class="mb-3">
+  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Review </label>
+  <textarea id="message" rows="3" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-400 focus:border-0 block w-full p-2.5" placeholder="Add your Review "></textarea>
+</div>
+
+ <div class="flex justify-end w-full">
+  
+
+  <button type="submit" class="mb-2 w-64 h-12 bg-[#815DF2] rounded flex justify-center items-center text-white font-bold text-base transform translate-y-2 transition-transform duration-300 ease-in-out hover:translate-y-0 hover:shadow-md">Submit your review</button>
+ </div>
+</form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
